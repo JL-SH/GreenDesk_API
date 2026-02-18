@@ -3,8 +3,8 @@ from datetime import datetime, timedelta
 from typing import List
 from fastapi import FastAPI, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
-from . import models, schemas
-from .database import get_db
+from app import models, schemas
+from app.db import get_db
 
 app = FastAPI(
     title="GreenDesk Inventory API",
