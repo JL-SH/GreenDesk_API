@@ -18,7 +18,7 @@ services:
       timeout: 5s
       retries: 5
 
-    app:
+  app:
     build: .
     container_name: fastapi_app
     volumes:
@@ -29,7 +29,7 @@ services:
       - DB_HOST=db
     ports:
       - "8000:8000"
-    command: ["./start.sh"]        
+    command: ["./start.sh"]
     depends_on:
       db:
         condition: service_healthy
